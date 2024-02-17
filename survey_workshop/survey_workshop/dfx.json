@@ -1,0 +1,30 @@
+{
+  "canisters": {
+    "survey_workshop_backend": {
+      "candid": "src/survey_workshop_backend/survey_workshop_backend.did",
+      "package": "survey_workshop_backend",
+      "type": "rust"
+    },
+    "survey_workshop_frontend": {
+      "dependencies": [
+        "survey_workshop_backend"
+      ],
+      "frontend": {
+        "entrypoint": "src/survey_workshop_frontend/src/index.html"
+      },
+      "source": [
+        "src/survey_workshop_frontend/assets",
+        "dist/survey_workshop_frontend/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
